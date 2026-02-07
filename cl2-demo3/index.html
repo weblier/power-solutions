@@ -1,0 +1,3803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Premium Electrical Services - Modern electrical solutions for residential and commercial properties">
+    <title>VoltEdge Solutions | Premium Electrical Services</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Link to External CSS -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* ===================================
+   VOLTEDGE SOLUTIONS - PREMIUM STYLES
+   Modern Glassmorphic Design System
+   =================================== */
+
+        /* ==================
+   CSS RESET & BASE
+   ================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Primary Brand Colors */
+            --primary-color: #024f16;
+            --primary-light: #036b1f;
+            --primary-dark: #013a10;
+
+            /* Gradient Colors */
+            --gradient-1: linear-gradient(135deg, #024f16 0%, #036b1f 50%, #04a328 100%);
+            --gradient-2: linear-gradient(135deg, #e0f7e9 0%, #c8f0d9 50%, #a8e6c1 100%);
+            --gradient-3: linear-gradient(135deg, rgba(2, 79, 22, 0.1) 0%, rgba(3, 107, 31, 0.05) 100%);
+
+            /* Neutral Colors */
+            --white: #ffffff;
+            --black: #0a0a0a;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+
+            /* Glass Effect */
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(2, 79, 22, 0.15);
+
+            /* Typography */
+            --font-primary: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 2rem;
+            --spacing-lg: 4rem;
+            --spacing-xl: 6rem;
+
+            /* Border Radius */
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+
+            /* Transitions */
+            --transition-fast: 0.2s ease;
+            --transition-base: 0.3s ease;
+            --transition-slow: 0.5s ease;
+
+            /* Z-index Layers */
+            --z-background: -1;
+            --z-base: 1;
+            --z-dropdown: 100;
+            --z-sticky: 500;
+            --z-modal: 1000;
+            --z-tooltip: 2000;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--gray-800);
+            background: linear-gradient(135deg, #f0f9f4 0%, #e8f5ee 50%, #dff0e8 100%);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* =============================
+   ANIMATED BACKGROUND GRADIENT
+   ============================= */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f0f9f4 0%, #e8f5ee 25%, #dff0e8 50%, #d6ebe2 75%, #cde6dc 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: var(--z-background);
+            pointer-events: none;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* ===========================
+   GLASSMORPHIC UTILITIES
+   =========================== */
+        .glass-element {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 16px rgba(2, 79, 22, 0.1);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: var(--radius-lg);
+            box-shadow: 0 8px 32px rgba(2, 79, 22, 0.12);
+            transition: all var(--transition-base);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(2, 79, 22, 0.18);
+            border-color: rgba(2, 79, 22, 0.2);
+        }
+
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* =====================
+   GRADIENT TEXT
+   ===================== */
+        .gradient-text {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* =====================
+   CONTAINER & LAYOUT
+   ===================== */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ============================
+   GLASSMORPHIC HEADER / NAV
+   ============================ */
+        .glass-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 24px rgba(2, 79, 22, 0.08);
+            z-index: var(--z-sticky);
+            transition: all var(--transition-base);
+        }
+
+        .glass-header.scrolled {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px rgba(2, 79, 22, 0.12);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            cursor: pointer;
+            transition: transform var(--transition-base);
+        }
+
+        .logo-section:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            color: var(--primary-color);
+            font-size: 2rem;
+            animation: rotatePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes rotatePulse {
+
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(5deg) scale(1.1);
+            }
+        }
+
+        .logo-text {
+            color: var(--gray-900);
+        }
+
+        .logo-highlight {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--gray-700);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.5rem 0;
+            transition: color var(--transition-base);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: width var(--transition-base);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-cta .cta-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: all var(--transition-base);
+        }
+
+        .nav-cta .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(2, 79, 22, 0.2);
+        }
+
+        /* Mobile Toggle */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .mobile-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            border-radius: 2px;
+            transition: all var(--transition-base);
+        }
+
+        .mobile-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ========================
+   HERO SECTION
+   ======================== */
+        .hero-section {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero-slider {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .hero-slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+
+        .hero-content-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+        }
+
+        .hero-content {
+            animation: slideInLeft 0.8s ease;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            animation: fadeInDown 0.8s ease 0.2s backwards;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+        }
+
+        .title-line {
+            display: block;
+            animation: fadeInUp 0.8s ease backwards;
+        }
+
+        .title-line:nth-child(1) {
+            animation-delay: 0.3s;
+        }
+
+        .title-line:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+            animation: fadeIn 0.8s ease 0.5s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+            animation: fadeIn 0.8s ease 0.6s backwards;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all var(--transition-base);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: var(--white);
+            box-shadow: 0 4px 16px rgba(2, 79, 22, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(2, 79, 22, 0.4);
+        }
+
+        .glow-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glow-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .glow-btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-secondary {
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(2, 79, 22, 0.2);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease 0.7s backwards;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem 1.75rem;
+            border-radius: var(--radius-md);
+        }
+
+        .stat-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .stat-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-content p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* Hero Visual */
+        .hero-visual {
+            position: relative;
+            height: 600px;
+            animation: slideInRight 0.8s ease;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .floating-card {
+            position: absolute;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            animation: floatAnimation 3s ease-in-out infinite;
+        }
+
+        .floating-card:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            width: 200px;
+        }
+
+        .floating-card:nth-child(2) {
+            top: 40%;
+            right: 5%;
+            width: 220px;
+        }
+
+        .floating-card:nth-child(3) {
+            bottom: 15%;
+            left: 20%;
+            width: 200px;
+        }
+
+        .floating-card.delay-1 {
+            animation-delay: 0.5s;
+        }
+
+        .floating-card.delay-2 {
+            animation-delay: 1s;
+        }
+
+        @keyframes floatAnimation {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .floating-card i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .floating-card h4 {
+            font-size: 1.1rem;
+            color: var(--gray-800);
+            font-weight: 600;
+        }
+
+        /* Slider Controls */
+        .slider-controls {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            z-index: 10;
+        }
+
+        .slider-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
+        }
+
+        .slider-dots {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            border: 2px solid rgba(2, 79, 22, 0.3);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .slider-dot.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: scale(1.2);
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 2rem;
+            text-align: center;
+            animation: fadeInUp 1s ease 1s backwards;
+        }
+
+        .mouse {
+            width: 30px;
+            height: 50px;
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            margin: 0 auto 0.5rem;
+            position: relative;
+        }
+
+        .wheel {
+            width: 4px;
+            height: 10px;
+            background: var(--primary-color);
+            border-radius: 2px;
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: scrollWheel 1.5s ease-in-out infinite;
+        }
+
+        @keyframes scrollWheel {
+            0% {
+                opacity: 1;
+                top: 8px;
+            }
+
+            100% {
+                opacity: 0;
+                top: 28px;
+            }
+        }
+
+        .scroll-indicator p {
+            font-size: 0.85rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        /* =========================
+   SECTION COMMON STYLES
+   ========================= */
+        section {
+            padding: var(--spacing-xl) 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            border-radius: var(--radius-xl);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .section-description {
+            font-size: 1.15rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+        }
+
+        /* ========================
+   SERVICES SECTION
+   ======================== */
+        .services-section {
+            background: var(--gradient-3);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            padding: 2.5rem;
+            transition: all var(--transition-base);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: all var(--transition-base);
+        }
+
+        .service-icon i {
+            font-size: 2.5rem;
+            color: var(--white);
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(360deg);
+        }
+
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+        }
+
+        .service-description {
+            font-size: 1rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem 0;
+            color: var(--gray-700);
+            font-size: 0.95rem;
+        }
+
+        .service-features li i {
+            color: var(--primary-color);
+            font-size: 0.85rem;
+        }
+
+        .service-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(2, 79, 22, 0.1);
+            border: 1px solid rgba(2, 79, 22, 0.2);
+            border-radius: var(--radius-md);
+            color: var(--primary-color);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .service-btn:hover {
+            background: var(--gradient-1);
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .service-btn i {
+            transition: transform var(--transition-base);
+        }
+
+        .service-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* ========================
+   SERVICE MODAL
+   ======================== */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: var(--z-modal);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 3rem;
+            position: relative;
+            animation: modalSlideUp 0.4s ease;
+        }
+
+        @keyframes modalSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: var(--gray-700);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-close:hover {
+            background: rgba(255, 0, 0, 0.1);
+            color: #dc3545;
+            transform: rotate(90deg);
+        }
+
+        .modal-content h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-content p {
+            font-size: 1.1rem;
+            color: #c9c9c9;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .modal-content ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .modal-content ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(2, 79, 22, 0.1);
+        }
+
+        .modal-content ul li i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .modal-content ul li strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* ========================
+   PROJECTS SECTION
+   ======================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(2, 79, 22, 0.95) 0%, rgba(2, 79, 22, 0.7) 50%, transparent 100%);
+            backdrop-filter: blur(0px);
+            padding: 2rem;
+            display: flex;
+            align-items: flex-end;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+            backdrop-filter: blur(5px);
+        }
+
+        .project-info {
+            transform: translateY(30px);
+            transition: transform 0.5s ease 0.1s;
+        }
+
+        .project-card:hover .project-info {
+            transform: translateY(0);
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-sm);
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+        }
+
+        .project-description {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .project-tags .tag {
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: var(--radius-sm);
+            color: var(--white);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* ========================
+   BRANDS SECTION
+   ======================== */
+        .brands-section {
+            background: rgba(255, 255, 255, 0.5);
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+
+        .brands-marquee {
+            width: 100%;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .marquee-track {
+            display: flex;
+            gap: 3rem;
+            animation: marqueeScroll 30s linear infinite;
+        }
+
+        @keyframes marqueeScroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .brand-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2.5rem;
+            border-radius: var(--radius-md);
+            white-space: nowrap;
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        .brand-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .brand-item span {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+        }
+
+        /* ========================
+   ABOUT SECTION
+   ======================== */
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-sm);
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon i {
+            font-size: 1.75rem;
+            color: var(--white);
+        }
+
+        .feature-content h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+        }
+
+        .about-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .about-visual {
+            position: relative;
+            height: 600px;
+        }
+
+        .visual-card {
+            position: absolute;
+            padding: 2.5rem;
+            text-align: center;
+            animation: floatAnimation 4s ease-in-out infinite;
+        }
+
+        .visual-card.large {
+            top: 5%;
+            left: 0;
+            width: 250px;
+            height: 250px;
+        }
+
+        .visual-card.medium {
+            top: 35%;
+            right: 10%;
+            width: 200px;
+            height: 200px;
+            animation-delay: 0.5s;
+        }
+
+        .visual-card.small {
+            bottom: 10%;
+            left: 15%;
+            width: 180px;
+            height: 180px;
+            animation-delay: 1s;
+        }
+
+        .visual-card .card-content i {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .visual-card .card-content h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .visual-card .card-content p {
+            font-size: 1rem;
+            color: var(--gray-600);
+            font-weight: 600;
+        }
+
+        /* ===========================
+   TESTIMONIALS SECTION
+   =========================== */
+        .testimonials-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .testimonials-track {
+            display: flex;
+            gap: 2rem;
+            transition: transform 0.5s ease;
+        }
+
+        .testimonial-card {
+            min-width: calc(33.333% - 1.5rem);
+            padding: 2.5rem;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .client-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary-color);
+        }
+
+        .client-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .client-info {
+            flex: 1;
+        }
+
+        .client-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.25rem;
+        }
+
+        .client-role {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+        }
+
+        .rating {
+            display: flex;
+            gap: 0.25rem;
+        }
+
+        .rating i {
+            color: #ffc107;
+            font-size: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            color: var(--gray-700);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-footer {
+            text-align: right;
+        }
+
+        .testimonial-footer i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+        }
+
+        .testimonial-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: all var(--transition-base);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .testimonial-nav:hover {
+            background: rgba(255, 255, 255, 0.5);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .testimonial-nav.prev {
+            left: -25px;
+        }
+
+        .testimonial-nav.next {
+            right: -25px;
+        }
+
+        /* ========================
+   CONTACT SECTION
+   ======================== */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            padding: 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .info-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-sm);
+            background: var(--gradient-1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .info-icon i {
+            font-size: 1.75rem;
+            color: var(--white);
+        }
+
+        .info-content h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 0.75rem;
+        }
+
+        .info-content p {
+            font-size: 1rem;
+            color: var(--gray-600);
+            line-height: 1.6;
+        }
+
+        .info-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        .info-content a:hover {
+            color: var(--primary-dark);
+        }
+
+        .contact-form {
+            padding: 3rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-wrapper i {
+            position: absolute;
+            left: 1.25rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .input-wrapper input,
+        .input-wrapper select,
+        .input-wrapper textarea {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3.5rem;
+            border: 1px solid rgba(2, 79, 22, 0.2);
+            border-radius: var(--radius-md);
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            color: var(--gray-800);
+            transition: all var(--transition-base);
+        }
+
+        .input-wrapper input:focus,
+        .input-wrapper select:focus,
+        .input-wrapper textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 16px rgba(2, 79, 22, 0.1);
+        }
+
+        .input-wrapper textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* ========================
+   FOOTER SECTION
+   ======================== */
+        .footer-section {
+            position: relative;
+            background: linear-gradient(135deg, rgba(2, 79, 22, 0.95) 0%, rgba(3, 107, 31, 0.95) 100%);
+            color: var(--white);
+            padding: 4rem 0 2rem;
+            overflow: hidden;
+        }
+
+        .footer-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.05)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,112C1248,107,1344,117,1392,122.7L1440,128L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo i {
+            font-size: 2.5rem;
+        }
+
+        .footer-logo .highlight {
+            color: #a8e6c1;
+        }
+
+        .footer-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: var(--white);
+            transition: all var(--transition-base);
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition-base);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+            transform: translateX(5px);
+        }
+
+        .footer-contact {
+            list-style: none;
+        }
+
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-contact i {
+            margin-top: 0.25rem;
+            font-size: 1.25rem;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom-content p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .footer-bottom-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color var(--transition-base);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom-links span {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Scroll to Top Button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-base);
+            z-index: var(--z-sticky);
+            border: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(2, 79, 22, 0.3);
+        }
+
+        /* ========================
+   AOS ANIMATIONS
+   ======================== */
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+
+        [data-aos="fade-up"] {
+            transform: translateY(30px);
+        }
+
+        [data-aos="fade-up"].aos-animate {
+            transform: translateY(0);
+        }
+
+        [data-aos="fade-right"] {
+            transform: translateX(-30px);
+        }
+
+        [data-aos="fade-right"].aos-animate {
+            transform: translateX(0);
+        }
+
+        [data-aos="fade-left"] {
+            transform: translateX(30px);
+        }
+
+        [data-aos="fade-left"].aos-animate {
+            transform: translateX(0);
+        }
+
+        /* ========================
+   RESPONSIVE DESIGN
+   ======================== */
+        @media (max-width: 1200px) {
+            .hero-content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-visual {
+                height: 400px;
+            }
+
+            .about-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 3rem;
+                gap: 1.5rem;
+                transition: left var(--transition-base);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .services-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                min-width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .slider-controls {
+                bottom: 1.5rem;
+            }
+
+            .scroll-indicator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            .nav-cta {
+                display: none;
+            }
+            .make-hide {
+                display: none;
+            }
+            .hero-visual {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .modal-container {
+                padding: 2rem;
+            }
+
+            .project-card {
+                height: 300px;
+            }
+
+            .testimonial-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+
+        /* ========================
+   UTILITY CLASSES
+   ======================== */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-1 {
+            margin-top: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .mt-3 {
+            margin-top: 3rem;
+        }
+
+        .mb-1 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 3rem;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* ========================
+   LOADING STATES
+   ======================== */
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .loading {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 1000px 100%;
+            animation: shimmer 2s infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Animated Background Gradient -->
+    <div class="animated-bg"></div>
+
+    <!-- Glassmorphic Navigation Header -->
+    <header class="glass-header" id="header">
+        <nav class="nav-container">
+            <div class="logo-section">
+                <i class="fas fa-bolt logo-icon"></i>
+                <span class="logo-text">VoltEdge<span class="logo-highlight">Solutions</span></span>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="tel:+919876543210" class="cta-btn glass-btn">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>Get Quote</span>
+                </a>
+            </div>
+
+            <div class="mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Animated Gradient Slider -->
+    <section class="hero-section" id="home">
+        <div class="hero-slider">
+            <!-- Slide 1 -->
+            <div class="hero-slide active">
+                <div class="hero-content-wrapper">
+                    <div class="hero-content">
+                        <div class="hero-badge glass-element">
+                            <i class="fas fa-award"></i>
+                            <span>Certified Electrical Experts</span>
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="title-line">Powering Your</span>
+                            <span class="title-line gradient-text">Future Brighter</span>
+                        </h1>
+                        <p class="hero-subtitle">Premium electrical solutions with cutting-edge technology and unmatched
+                            expertise for residential and commercial spaces</p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn-primary glow-btn">
+                                <span>Explore Services</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn-secondary glass-btn">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Book Consultation</span>
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item glass-element">
+                                <i class="fas fa-check-circle"></i>
+                                <div class="stat-content">
+                                    <h3 class="stat-number" data-target="2500">0</h3>
+                                    <p class="stat-label">Projects Done</p>
+                                </div>
+                            </div>
+                            <div class="stat-item glass-element">
+                                <i class="fas fa-users"></i>
+                                <div class="stat-content">
+                                    <h3 class="stat-number" data-target="1800">0</h3>
+                                    <p class="stat-label">Happy Clients</p>
+                                </div>
+                            </div>
+                            <div class="stat-item glass-element">
+                                <i class="fas fa-star"></i>
+                                <div class="stat-content">
+                                    <h3 class="stat-number" data-target="15">0</h3>
+                                    <p class="stat-label">Years Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="floating-card glass-element">
+                            <i class="fas fa-charging-station"></i>
+                            <h4>Smart Solutions</h4>
+                        </div>
+                        <div class="floating-card glass-element delay-1">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Safety First</h4>
+                        </div>
+                        <div class="floating-card glass-element delay-2">
+                            <i class="fas fa-clock"></i>
+                            <h4>24/7 Support</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="hero-slide">
+                <div class="hero-content-wrapper">
+                    <div class="hero-content">
+                        <div class="hero-badge glass-element">
+                            <i class="fas fa-bolt"></i>
+                            <span>Innovative Energy Solutions</span>
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="title-line">Smart Electrical</span>
+                            <span class="title-line gradient-text">Systems & Automation</span>
+                        </h1>
+                        <p class="hero-subtitle">Transform your space with intelligent electrical systems, IoT
+                            integration, and energy-efficient solutions</p>
+                        <div class="hero-buttons">
+                            <a href="#services" class="btn-primary glow-btn">
+                                <span>Our Solutions</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="btn-secondary glass-btn">
+                                <i class="fas fa-images"></i>
+                                <span>View Portfolio</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="floating-card glass-element">
+                            <i class="fas fa-solar-panel"></i>
+                            <h4>Solar Integration</h4>
+                        </div>
+                        <div class="floating-card glass-element delay-1">
+                            <i class="fas fa-home"></i>
+                            <h4>Home Automation</h4>
+                        </div>
+                        <div class="floating-card glass-element delay-2">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Eco-Friendly</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="hero-slide">
+                <div class="hero-content-wrapper">
+                    <div class="hero-content">
+                        <div class="hero-badge glass-element">
+                            <i class="fas fa-certificate"></i>
+                            <span>Licensed & Insured Professionals</span>
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="title-line">Excellence in</span>
+                            <span class="title-line gradient-text">Electrical Engineering</span>
+                        </h1>
+                        <p class="hero-subtitle">Certified experts delivering world-class electrical installations,
+                            maintenance, and emergency services</p>
+                        <div class="hero-buttons">
+                            <a href="#about" class="btn-primary glow-btn">
+                                <span>About Us</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="tel:+919876543210" class="btn-secondary glass-btn">
+                                <i class="fas fa-phone"></i>
+                                <span>Call Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="floating-card glass-element">
+                            <i class="fas fa-tools"></i>
+                            <h4>Expert Team</h4>
+                        </div>
+                        <div class="floating-card glass-element delay-1">
+                            <i class="fas fa-headset"></i>
+                            <h4>Quick Response</h4>
+                        </div>
+                        <div class="floating-card glass-element delay-2">
+                            <i class="fas fa-medal"></i>
+                            <h4>Quality Work</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-btn prev-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="slider-btn next-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- Services Section with Glass Cards -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag glass-element">What We Offer</span>
+                <h2 class="section-title">
+                    Our Premium <span class="gradient-text">Services</span>
+                </h2>
+                <p class="section-description">Comprehensive electrical solutions tailored to your needs with
+                    cutting-edge technology and expert craftsmanship</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="service-title">Residential Wiring</h3>
+                    <p class="service-description">Complete home electrical installations, rewiring, panel upgrades, and
+                        smart home integration</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> New Construction Wiring</li>
+                        <li><i class="fas fa-check"></i> Panel Upgrades</li>
+                        <li><i class="fas fa-check"></i> Circuit Installation</li>
+                        <li><i class="fas fa-check"></i> Smart Home Setup</li>
+                    </ul>
+                    <button class="service-btn" data-service="residential">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="service-title">Commercial Solutions</h3>
+                    <p class="service-description">Enterprise-grade electrical systems for offices, retail spaces, and
+                        industrial facilities</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Office Installations</li>
+                        <li><i class="fas fa-check"></i> Lighting Systems</li>
+                        <li><i class="fas fa-check"></i> Power Distribution</li>
+                        <li><i class="fas fa-check"></i> Emergency Backup</li>
+                    </ul>
+                    <button class="service-btn" data-service="commercial">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <h3 class="service-title">Solar Integration</h3>
+                    <p class="service-description">Sustainable energy solutions with solar panel installation and grid
+                        integration</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Solar Panel Setup</li>
+                        <li><i class="fas fa-check"></i> Battery Systems</li>
+                        <li><i class="fas fa-check"></i> Grid Connection</li>
+                        <li><i class="fas fa-check"></i> Monitoring Systems</li>
+                    </ul>
+                    <button class="service-btn" data-service="solar">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="service-title">Automation Systems</h3>
+                    <p class="service-description">IoT-enabled smart automation for lighting, climate, and security
+                        control</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Smart Lighting</li>
+                        <li><i class="fas fa-check"></i> Climate Control</li>
+                        <li><i class="fas fa-check"></i> Security Integration</li>
+                        <li><i class="fas fa-check"></i> Voice Control</li>
+                    </ul>
+                    <button class="service-btn" data-service="automation">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="service-title">Maintenance & Repair</h3>
+                    <p class="service-description">Regular maintenance, troubleshooting, and emergency repair services
+                        24/7</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Preventive Maintenance</li>
+                        <li><i class="fas fa-check"></i> Emergency Repairs</li>
+                        <li><i class="fas fa-check"></i> Fault Detection</li>
+                        <li><i class="fas fa-check"></i> System Upgrades</li>
+                    </ul>
+                    <button class="service-btn" data-service="maintenance">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="service-title">Emergency Services</h3>
+                    <p class="service-description">Round-the-clock emergency response for electrical failures and safety
+                        issues</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> 24/7 Availability</li>
+                        <li><i class="fas fa-check"></i> Rapid Response</li>
+                        <li><i class="fas fa-check"></i> Safety Inspections</li>
+                        <li><i class="fas fa-check"></i> Critical Repairs</li>
+                    </ul>
+                    <button class="service-btn" data-service="emergency">
+                        <span>Learn More</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Detail Modal (Dynamic Popup) -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-container glass-card">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section with Hover Effects -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag glass-element">Our Work</span>
+                <h2 class="section-title">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="section-description">Explore our portfolio of successful electrical installations and
+                    transformations</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop"
+                            alt="Luxury Villa Electrical Setup">
+                        <div class="project-overlay glass-element">
+                            <div class="project-info">
+                                <span class="project-category">Residential</span>
+                                <h3 class="project-title">Luxury Villa Complete Setup</h3>
+                                <p class="project-description">Smart home automation with integrated lighting, climate
+                                    control, and security systems</p>
+                                <div class="project-tags">
+                                    <span class="tag">Smart Home</span>
+                                    <span class="tag">Automation</span>
+                                    <span class="tag">Luxury</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop"
+                            alt="Corporate Office Electrical">
+                        <div class="project-overlay glass-element">
+                            <div class="project-info">
+                                <span class="project-category">Commercial</span>
+                                <h3 class="project-title">Corporate Office Building</h3>
+                                <p class="project-description">Complete electrical infrastructure for 10-floor
+                                    commercial complex with backup systems</p>
+                                <div class="project-tags">
+                                    <span class="tag">Commercial</span>
+                                    <span class="tag">Large Scale</span>
+                                    <span class="tag">Enterprise</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop"
+                            alt="Solar Panel Installation">
+                        <div class="project-overlay glass-element">
+                            <div class="project-info">
+                                <span class="project-category">Solar</span>
+                                <h3 class="project-title">Residential Solar Grid</h3>
+                                <p class="project-description">50kW solar installation with battery storage and smart
+                                    grid integration</p>
+                                <div class="project-tags">
+                                    <span class="tag">Solar</span>
+                                    <span class="tag">Sustainable</span>
+                                    <span class="tag">Green Energy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop"
+                            alt="Restaurant Lighting">
+                        <div class="project-overlay glass-element">
+                            <div class="project-info">
+                                <span class="project-category">Commercial</span>
+                                <h3 class="project-title">Fine Dining Restaurant</h3>
+                                <p class="project-description">Ambient lighting design with smart controls and
+                                    energy-efficient LED systems</p>
+                                <div class="project-tags">
+                                    <span class="tag">Lighting</span>
+                                    <span class="tag">Design</span>
+                                    <span class="tag">Hospitality</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop"
+                            alt="Industrial Facility">
+                        <div class="project-overlay glass-element">
+                            <div class="project-info">
+                                <span class="project-category">Industrial</span>
+                                <h3 class="project-title">Manufacturing Plant</h3>
+                                <p class="project-description">Heavy-duty electrical systems with automated machinery
+                                    integration</p>
+                                <div class="project-tags">
+                                    <span class="tag">Industrial</span>
+                                    <span class="tag">Heavy Duty</span>
+                                    <span class="tag">Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
+                            alt="Modern Apartment">
+                        <div class="project-overlay glass-element">
+                            <div class="project-info">
+                                <span class="project-category">Residential</span>
+                                <h3 class="project-title">Modern Apartment Complex</h3>
+                                <p class="project-description">Complete rewiring and smart home upgrades for 24-unit
+                                    apartment building</p>
+                                <div class="project-tags">
+                                    <span class="tag">Multi-Unit</span>
+                                    <span class="tag">Smart Home</span>
+                                    <span class="tag">Upgrade</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Partners - Animated Marquee -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag glass-element">Trusted Partners</span>
+                <h2 class="section-title">
+                    We Work With The <span class="gradient-text">Best Brands</span>
+                </h2>
+            </div>
+
+            <div class="brands-marquee">
+                <div class="marquee-track">
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-bolt"></i>
+                        <span>Siemens</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Philips</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-plug"></i>
+                        <span>Schneider Electric</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-solar-panel"></i>
+                        <span>ABB</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-microchip"></i>
+                        <span>Legrand</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-battery-full"></i>
+                        <span>Havells</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-charging-station"></i>
+                        <span>Anchor</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Honeywell</span>
+                    </div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-bolt"></i>
+                        <span>Siemens</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Philips</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-plug"></i>
+                        <span>Schneider Electric</span>
+                    </div>
+                    <div class="brand-item glass-element">
+                        <i class="fas fa-solar-panel"></i>
+                        <span>ABB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Layered Glass Panels -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-wrapper">
+                <div class="about-content" data-aos="fade-right">
+                    <span class="section-tag glass-element">About Us</span>
+                    <h2 class="section-title">
+                        Leading <span class="gradient-text">Electrical Excellence</span> Since 2010
+                    </h2>
+                    <p class="about-text">VoltEdge Solutions is a premier electrical services company dedicated to
+                        delivering innovative, safe, and energy-efficient solutions. With over 15 years of industry
+                        experience, we've established ourselves as trusted partners for residential, commercial, and
+                        industrial electrical needs.</p>
+
+                    <div class="about-features">
+                        <div class="feature-item glass-element">
+                            <div class="feature-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Certified Professionals</h4>
+                                <p>Licensed electricians with extensive training and certifications</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item glass-element">
+                            <div class="feature-icon">
+                                <i class="fas fa-shield-check"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Safety Guaranteed</h4>
+                                <p>100% compliance with safety standards and regulations</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item glass-element">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>Award Winning</h4>
+                                <p>Recognized for excellence in electrical services and innovation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="#contact" class="btn-primary glow-btn">
+                            <span>Get Started</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="tel:+919876543210" class="btn-secondary glass-btn">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="about-visual make-hide" data-aos="fade-left">
+                    <div class="visual-card glass-card large">
+                        <div class="card-content">
+                            <i class="fas fa-users-cog"></i>
+                            <h3>50+</h3>
+                            <p>Expert Technicians</p>
+                        </div>
+                    </div>
+                    <div class="visual-card glass-card medium">
+                        <div class="card-content">
+                            <i class="fas fa-clock"></i>
+                            <h3>24/7</h3>
+                            <p>Emergency Support</p>
+                        </div>
+                    </div>
+                    <div class="visual-card glass-card small">
+                        <div class="card-content">
+                            <i class="fas fa-thumbs-up"></i>
+                            <h3>100%</h3>
+                            <p>Satisfaction Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Auto-Sliding Cards -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag glass-element">Client Reviews</span>
+                <h2 class="section-title">
+                    What Our <span class="gradient-text">Clients Say</span>
+                </h2>
+                <p class="section-description">Real feedback from satisfied customers who trust our services</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-image">
+                                <img src="https://i.pravatar.cc/150?img=12" alt="Rajesh Kumar">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Rajesh Kumar</h4>
+                                <p class="client-role">Homeowner</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"VoltEdge transformed our home with their smart automation system.
+                            The team was professional, punctual, and the quality of work exceeded our expectations.
+                            Highly recommended!"</p>
+                        <div class="testimonial-footer">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-image">
+                                <img src="https://i.pravatar.cc/150?img=32" alt="Priya Sharma">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Priya Sharma</h4>
+                                <p class="client-role">Business Owner</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Exceptional service for our restaurant's electrical upgrade! They
+                            designed a perfect lighting system that enhanced the ambiance. Professional team with great
+                            attention to detail."</p>
+                        <div class="testimonial-footer">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-image">
+                                <img src="https://i.pravatar.cc/150?img=51" alt="Amit Patel">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Amit Patel</h4>
+                                <p class="client-role">Property Manager</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"We've been working with VoltEdge for our entire apartment complex.
+                            Their maintenance service is reliable, and they respond quickly to emergency calls. True
+                            professionals!"</p>
+                        <div class="testimonial-footer">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-image">
+                                <img src="https://i.pravatar.cc/150?img=47" alt="Sneha Reddy">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Sneha Reddy</h4>
+                                <p class="client-role">Architect</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"I collaborate with VoltEdge on multiple projects. Their
+                            understanding of modern electrical systems and ability to execute complex designs is
+                            impressive. A trusted partner!"</p>
+                        <div class="testimonial-footer">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-image">
+                                <img src="https://i.pravatar.cc/150?img=68" alt="Vikram Singh">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Vikram Singh</h4>
+                                <p class="client-role">Factory Owner</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"VoltEdge handled our industrial electrical setup flawlessly. They
+                            understand heavy machinery requirements and delivered a robust system. Excellent work and
+                            great value!"</p>
+                        <div class="testimonial-footer">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 6 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="testimonial-header">
+                            <div class="client-image">
+                                <img src="https://i.pravatar.cc/150?img=26" alt="Neha Gupta">
+                            </div>
+                            <div class="client-info">
+                                <h4 class="client-name">Neha Gupta</h4>
+                                <p class="client-role">Solar Enthusiast</p>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Our solar installation was seamless thanks to VoltEdge. They guided
+                            us through the entire process and the system is performing excellently. Very happy with the
+                            investment!"</p>
+                        <div class="testimonial-footer">
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="testimonial-nav prev" id="testimonialPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-nav next" id="testimonialNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Floating Form -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag glass-element">Get In Touch</span>
+                <h2 class="section-title">
+                    Let's Start Your <span class="gradient-text">Next Project</span>
+                </h2>
+                <p class="section-description">Connect with our experts for a free consultation and quote</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Visit Our Office</h4>
+                            <p>123 Electrical Avenue, Tech Park</p>
+                            <p>Bangalore, Karnataka 560001</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                            <p><a href="tel:+918765432109">+91 87654 32109</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@voltedge.com">info@voltedge.com</a></p>
+                            <p><a href="mailto:support@voltedge.com">support@voltedge.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Working Hours</h4>
+                            <p>Mon - Sat: 8:00 AM - 8:00 PM</p>
+                            <p>24/7 Emergency Services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-envelope"></i>
+                                    <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="input-wrapper">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-briefcase"></i>
+                                <select id="service" name="service" required>
+                                    <option value="">Select Service Type</option>
+                                    <option value="residential">Residential Wiring</option>
+                                    <option value="commercial">Commercial Solutions</option>
+                                    <option value="solar">Solar Integration</option>
+                                    <option value="automation">Automation Systems</option>
+                                    <option value="maintenance">Maintenance & Repair</option>
+                                    <option value="emergency">Emergency Services</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-wrapper">
+                                <i class="fas fa-comment-alt"></i>
+                                <textarea id="message" name="message" placeholder="Tell us about your project..."
+                                    rows="5" required></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn glow-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with Gradient & Blur -->
+    <footer class="footer-section">
+        <div class="footer-gradient"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-bolt"></i>
+                        <span>VoltEdge<span class="highlight">Solutions</span></span>
+                    </div>
+                    <p class="footer-description">Powering your future with innovative electrical solutions,
+                        cutting-edge technology, and unmatched expertise.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link glass-element"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link glass-element"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link glass-element"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link glass-element"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link glass-element"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-angle-right"></i> Services</a></li>
+                        <li><a href="#projects"><i class="fas fa-angle-right"></i> Projects</a></li>
+                        <li><a href="#about"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#contact"><i class="fas fa-angle-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Residential Wiring</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Commercial Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Solar Integration</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Smart Automation</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Emergency Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Electrical Avenue<br>Bangalore, Karnataka 560001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@voltedge.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 VoltEdge Solutions. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#">Terms of Service</a>
+                        <span>|</span>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button class="scroll-top glass-element" id="scrollTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <!-- <script src="script.js"></script> -->
+    <script>
+        /* ================================================
+   VOLTEDGE SOLUTIONS - INTERACTIVE JAVASCRIPT
+   Advanced Animations & User Interactions
+   ================================================ */
+
+        // ========================
+        // GLOBAL STATE MANAGEMENT
+        // ========================
+        const AppState = {
+            currentSlide: 0,
+            currentTestimonial: 0,
+            isModalOpen: false,
+            scrollPosition: 0,
+            isMobileMenuOpen: false
+        };
+
+        // ========================
+        // DOM ELEMENTS
+        // ========================
+        const DOM = {
+            header: document.getElementById('header'),
+            mobileToggle: document.getElementById('mobileToggle'),
+            navMenu: document.getElementById('navMenu'),
+            navLinks: document.querySelectorAll('.nav-link'),
+            heroSlides: document.querySelectorAll('.hero-slide'),
+            sliderDots: document.getElementById('sliderDots'),
+            prevBtn: document.getElementById('prevBtn'),
+            nextBtn: document.getElementById('nextBtn'),
+            statNumbers: document.querySelectorAll('.stat-number'),
+            serviceButtons: document.querySelectorAll('.service-btn'),
+            serviceModal: document.getElementById('serviceModal'),
+            modalClose: document.getElementById('modalClose'),
+            modalContent: document.getElementById('modalContent'),
+            testimonialsTrack: document.getElementById('testimonialsTrack'),
+            testimonialPrev: document.getElementById('testimonialPrev'),
+            testimonialNext: document.getElementById('testimonialNext'),
+            contactForm: document.getElementById('contactForm'),
+            scrollTop: document.getElementById('scrollTop')
+        };
+
+        // ========================
+        // SERVICE MODAL DATA
+        // ========================
+        const serviceData = {
+            residential: {
+                title: 'Residential Wiring Solutions',
+                description: 'Transform your home with our comprehensive residential electrical services. From new construction wiring to complete rewiring, panel upgrades, and smart home integration, we deliver safe, efficient, and future-ready electrical solutions.',
+                features: [
+                    {
+                        icon: 'fa-home',
+                        title: 'New Construction Wiring',
+                        description: 'Complete electrical installation for new homes with modern standards and energy-efficient design'
+                    },
+                    {
+                        icon: 'fa-tools',
+                        title: 'Rewiring & Upgrades',
+                        description: 'Update outdated wiring systems to meet current safety codes and increased power demands'
+                    },
+                    {
+                        icon: 'fa-plug',
+                        title: 'Panel Upgrades',
+                        description: 'Upgrade your electrical panel to handle modern appliances and prevent circuit overloads'
+                    },
+                    {
+                        icon: 'fa-lightbulb',
+                        title: 'Smart Home Integration',
+                        description: 'Install intelligent lighting, climate control, and security systems with app-based controls'
+                    },
+                    {
+                        icon: 'fa-shield-alt',
+                        title: 'GFCI & AFCI Protection',
+                        description: 'Install ground fault and arc fault circuit interrupters for enhanced electrical safety'
+                    },
+                    {
+                        icon: 'fa-battery-full',
+                        title: 'Backup Power Systems',
+                        description: 'Set up generators and battery backup systems for uninterrupted power supply'
+                    }
+                ]
+            },
+            commercial: {
+                title: 'Commercial Electrical Solutions',
+                description: 'Power your business with enterprise-grade electrical systems designed for reliability, efficiency, and scalability. We specialize in offices, retail spaces, restaurants, and industrial facilities with comprehensive commercial electrical services.',
+                features: [
+                    {
+                        icon: 'fa-building',
+                        title: 'Office Installations',
+                        description: 'Complete electrical infrastructure for corporate offices, co-working spaces, and business centers'
+                    },
+                    {
+                        icon: 'fa-store',
+                        title: 'Retail Lighting Systems',
+                        description: 'Custom lighting solutions to enhance product displays and create inviting shopping environments'
+                    },
+                    {
+                        icon: 'fa-bolt',
+                        title: 'Power Distribution',
+                        description: 'Robust power distribution networks to handle high-demand commercial equipment'
+                    },
+                    {
+                        icon: 'fa-exclamation-triangle',
+                        title: 'Emergency Backup',
+                        description: 'Industrial-grade backup power systems and UPS installation for business continuity'
+                    },
+                    {
+                        icon: 'fa-video',
+                        title: 'Security Systems',
+                        description: 'Integrated CCTV, access control, and alarm systems with centralized monitoring'
+                    },
+                    {
+                        icon: 'fa-chart-line',
+                        title: 'Energy Management',
+                        description: 'Smart metering and energy monitoring systems to optimize power consumption and reduce costs'
+                    }
+                ]
+            },
+            solar: {
+                title: 'Solar Energy Integration',
+                description: 'Harness the power of the sun with our comprehensive solar energy solutions. We design, install, and maintain solar panel systems that reduce your carbon footprint while delivering significant energy cost savings.',
+                features: [
+                    {
+                        icon: 'fa-solar-panel',
+                        title: 'Solar Panel Installation',
+                        description: 'High-efficiency photovoltaic panels installed with optimal orientation and tilt angles'
+                    },
+                    {
+                        icon: 'fa-battery-full',
+                        title: 'Battery Storage Systems',
+                        description: 'Advanced lithium-ion battery banks to store excess energy for nighttime and cloudy days'
+                    },
+                    {
+                        icon: 'fa-plug',
+                        title: 'Grid Connection',
+                        description: 'Seamless integration with the utility grid including net metering and feed-in tariff setup'
+                    },
+                    {
+                        icon: 'fa-mobile-alt',
+                        title: 'Smart Monitoring',
+                        description: 'Real-time energy production monitoring through mobile apps and web dashboards'
+                    },
+                    {
+                        icon: 'fa-wrench',
+                        title: 'Maintenance Services',
+                        description: 'Regular panel cleaning, performance checks, and preventive maintenance to maximize efficiency'
+                    },
+                    {
+                        icon: 'fa-calculator',
+                        title: 'ROI Analysis',
+                        description: 'Detailed return on investment calculations and energy savings projections for your property'
+                    }
+                ]
+            },
+            automation: {
+                title: 'Smart Automation Systems',
+                description: 'Experience the future of living with our IoT-enabled smart automation solutions. Control lighting, climate, security, and entertainment systems from anywhere using your smartphone or voice commands.',
+                features: [
+                    {
+                        icon: 'fa-lightbulb',
+                        title: 'Smart Lighting Control',
+                        description: 'Automated lighting with scheduling, dimming, and color-changing capabilities via app or voice'
+                    },
+                    {
+                        icon: 'fa-thermometer-half',
+                        title: 'Climate Automation',
+                        description: 'Smart thermostats and HVAC controls for optimal comfort and energy efficiency'
+                    },
+                    {
+                        icon: 'fa-lock',
+                        title: 'Security Integration',
+                        description: 'Smart locks, cameras, and alarm systems with remote access and instant notifications'
+                    },
+                    {
+                        icon: 'fa-tv',
+                        title: 'Entertainment Systems',
+                        description: 'Centralized control for multi-room audio, video, and home theater systems'
+                    },
+                    {
+                        icon: 'fa-assistive-listening-systems',
+                        title: 'Voice Control',
+                        description: 'Integration with Alexa, Google Assistant, and Siri for hands-free home control'
+                    },
+                    {
+                        icon: 'fa-brain',
+                        title: 'AI Learning',
+                        description: 'Intelligent systems that learn your habits and automatically adjust settings for comfort'
+                    }
+                ]
+            },
+            maintenance: {
+                title: 'Maintenance & Repair Services',
+                description: 'Keep your electrical systems running smoothly with our comprehensive maintenance and repair services. Our certified electricians provide regular inspections, preventive maintenance, and fast emergency repairs to ensure safety and reliability.',
+                features: [
+                    {
+                        icon: 'fa-clipboard-check',
+                        title: 'Preventive Maintenance',
+                        description: 'Scheduled inspections and maintenance to prevent failures and extend equipment lifespan'
+                    },
+                    {
+                        icon: 'fa-tools',
+                        title: 'Emergency Repairs',
+                        description: '24/7 emergency response for electrical failures, outages, and safety hazards'
+                    },
+                    {
+                        icon: 'fa-search',
+                        title: 'Fault Detection',
+                        description: 'Advanced diagnostic tools to quickly identify and resolve electrical problems'
+                    },
+                    {
+                        icon: 'fa-level-up-alt',
+                        title: 'System Upgrades',
+                        description: 'Modernize outdated systems with energy-efficient components and latest technology'
+                    },
+                    {
+                        icon: 'fa-certificate',
+                        title: 'Safety Inspections',
+                        description: 'Comprehensive electrical safety audits with detailed reports and compliance certification'
+                    },
+                    {
+                        icon: 'fa-file-contract',
+                        title: 'Service Contracts',
+                        description: 'Flexible maintenance contracts with priority service and discounted rates'
+                    }
+                ]
+            },
+            emergency: {
+                title: '24/7 Emergency Electrical Services',
+                description: 'Electrical emergencies can happen anytime. Our rapid response team is available around the clock to handle urgent electrical issues, ensuring your safety and minimizing downtime. We prioritize emergency calls and arrive equipped to solve problems on the spot.',
+                features: [
+                    {
+                        icon: 'fa-clock',
+                        title: '24/7 Availability',
+                        description: 'Round-the-clock emergency service every day of the year including holidays'
+                    },
+                    {
+                        icon: 'fa-shipping-fast',
+                        title: 'Rapid Response',
+                        description: 'Average 30-minute response time for emergency calls within service area'
+                    },
+                    {
+                        icon: 'fa-shield-virus',
+                        title: 'Safety Priority',
+                        description: 'Immediate safety assessments and temporary solutions to prevent hazards'
+                    },
+                    {
+                        icon: 'fa-toolbox',
+                        title: 'Fully Equipped Vans',
+                        description: 'Mobile workshops with comprehensive tools and parts for on-site repairs'
+                    },
+                    {
+                        icon: 'fa-user-shield',
+                        title: 'Certified Technicians',
+                        description: 'Licensed emergency electricians trained for high-pressure situations'
+                    },
+                    {
+                        icon: 'fa-handshake',
+                        title: 'Transparent Pricing',
+                        description: 'Upfront pricing with no hidden charges for emergency services'
+                    }
+                ]
+            }
+        };
+
+        // ========================
+        // INITIALIZATION
+        // ========================
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeApp();
+        });
+
+        function initializeApp() {
+            setupHeaderScrollEffect();
+            setupMobileMenu();
+            setupSmoothScrolling();
+            setupHeroSlider();
+            setupStatCounters();
+            setupServiceModals();
+            setupTestimonialsSlider();
+            setupContactForm();
+            setupScrollToTop();
+            setupAOSAnimations();
+            setupMarquee();
+        }
+
+        // ========================
+        // HEADER SCROLL EFFECT
+        // ========================
+        function setupHeaderScrollEffect() {
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                // Add scrolled class when scrolled
+                if (currentScroll > 50) {
+                    DOM.header.classList.add('scrolled');
+                } else {
+                    DOM.header.classList.remove('scrolled');
+                }
+
+                // Update active navigation link
+                updateActiveNavLink();
+
+                lastScroll = currentScroll;
+            });
+        }
+
+        // ========================
+        // MOBILE MENU
+        // ========================
+        function setupMobileMenu() {
+            DOM.mobileToggle.addEventListener('click', () => {
+                DOM.mobileToggle.classList.toggle('active');
+                DOM.navMenu.classList.toggle('active');
+                AppState.isMobileMenuOpen = !AppState.isMobileMenuOpen;
+
+                // Prevent body scroll when menu is open
+                if (AppState.isMobileMenuOpen) {
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Close menu when clicking on a link
+            DOM.navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    DOM.mobileToggle.classList.remove('active');
+                    DOM.navMenu.classList.remove('active');
+                    AppState.isMobileMenuOpen = false;
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+
+        // ========================
+        // SMOOTH SCROLLING
+        // ========================
+        function setupSmoothScrolling() {
+            DOM.navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+
+                    if (targetId.startsWith('#')) {
+                        const targetSection = document.querySelector(targetId);
+                        if (targetSection) {
+                            const headerHeight = DOM.header.offsetHeight;
+                            const targetPosition = targetSection.offsetTop - headerHeight;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+        // ========================
+        // UPDATE ACTIVE NAV LINK
+        // ========================
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPosition = window.pageYOffset + 150;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    DOM.navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        // ========================
+        // HERO SLIDER
+        // ========================
+        function setupHeroSlider() {
+            const totalSlides = DOM.heroSlides.length;
+
+            // Create dots
+            createSliderDots(totalSlides);
+
+            // Button listeners
+            DOM.prevBtn.addEventListener('click', () => changeSlide(-1));
+            DOM.nextBtn.addEventListener('click', () => changeSlide(1));
+
+            // Dot listeners
+            const dots = document.querySelectorAll('.slider-dot');
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+
+            // Auto slide every 5 seconds
+            setInterval(() => {
+                changeSlide(1);
+            }, 5000);
+
+            // Show first slide
+            showSlide(AppState.currentSlide);
+        }
+
+        function createSliderDots(count) {
+            for (let i = 0; i < count; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'slider-dot';
+                if (i === 0) dot.classList.add('active');
+                DOM.sliderDots.appendChild(dot);
+            }
+        }
+
+        function changeSlide(direction) {
+            AppState.currentSlide += direction;
+
+            if (AppState.currentSlide >= DOM.heroSlides.length) {
+                AppState.currentSlide = 0;
+            } else if (AppState.currentSlide < 0) {
+                AppState.currentSlide = DOM.heroSlides.length - 1;
+            }
+
+            showSlide(AppState.currentSlide);
+        }
+
+        function goToSlide(index) {
+            AppState.currentSlide = index;
+            showSlide(AppState.currentSlide);
+        }
+
+        function showSlide(index) {
+            DOM.heroSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+
+            const dots = document.querySelectorAll('.slider-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.remove('active');
+                if (i === index) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        // ========================
+        // ANIMATED STAT COUNTERS
+        // ========================
+        function setupStatCounters() {
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                        animateCounter(entry.target);
+                        entry.target.classList.add('counted');
+                    }
+                });
+            }, observerOptions);
+
+            DOM.statNumbers.forEach(stat => observer.observe(stat));
+        }
+
+        function animateCounter(element) {
+            const target = parseInt(element.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+
+                if (current < target) {
+                    element.textContent = Math.floor(current) + '+';
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target + '+';
+                }
+            };
+
+            updateCounter();
+        }
+
+        // ========================
+        // SERVICE MODALS
+        // ========================
+        function setupServiceModals() {
+            DOM.serviceButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const serviceType = button.getAttribute('data-service');
+                    openServiceModal(serviceType);
+                });
+            });
+
+            DOM.modalClose.addEventListener('click', closeServiceModal);
+
+            DOM.serviceModal.addEventListener('click', (e) => {
+                if (e.target === DOM.serviceModal) {
+                    closeServiceModal();
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && AppState.isModalOpen) {
+                    closeServiceModal();
+                }
+            });
+        }
+
+        function openServiceModal(serviceType) {
+            const service = serviceData[serviceType];
+
+            if (!service) return;
+
+            let featuresHTML = service.features.map(feature => `
+        <li>
+            <i class="fas ${feature.icon}"></i>
+            <div>
+                <strong>${feature.title}</strong>
+                <p>${feature.description}</p>
+            </div>
+        </li>
+    `).join('');
+
+            DOM.modalContent.innerHTML = `
+        <h2>${service.title}</h2>
+        <p>${service.description}</p>
+        <ul>${featuresHTML}</ul>
+        <div style="margin-top: 2rem;">
+            <a href="#contact" class="btn-primary glow-btn" style="text-decoration: none;">
+                <span>Get a Free Quote</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    `;
+
+            DOM.serviceModal.classList.add('active');
+            AppState.isModalOpen = true;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeServiceModal() {
+            DOM.serviceModal.classList.remove('active');
+            AppState.isModalOpen = false;
+            document.body.style.overflow = '';
+        }
+
+        // ========================
+        // TESTIMONIALS SLIDER
+        // ========================
+        function setupTestimonialsSlider() {
+            const cards = document.querySelectorAll('.testimonial-card');
+            const cardWidth = cards[0]?.offsetWidth || 0;
+            const gap = 32; // 2rem in pixels
+
+            DOM.testimonialPrev.addEventListener('click', () => moveTestimonials(-1));
+            DOM.testimonialNext.addEventListener('click', () => moveTestimonials(1));
+
+            // Auto-slide every 4 seconds
+            setInterval(() => {
+                moveTestimonials(1);
+            }, 4000);
+
+            function moveTestimonials(direction) {
+                const maxIndex = cards.length - 3; // Show 3 cards at a time
+
+                AppState.currentTestimonial += direction;
+
+                if (AppState.currentTestimonial > maxIndex) {
+                    AppState.currentTestimonial = 0;
+                } else if (AppState.currentTestimonial < 0) {
+                    AppState.currentTestimonial = maxIndex;
+                }
+
+                const offset = -(AppState.currentTestimonial * (cardWidth + gap));
+                DOM.testimonialsTrack.style.transform = `translateX(${offset}px)`;
+            }
+
+            // Adjust for responsive
+            window.addEventListener('resize', () => {
+                const newCardWidth = cards[0]?.offsetWidth || 0;
+                const offset = -(AppState.currentTestimonial * (newCardWidth + gap));
+                DOM.testimonialsTrack.style.transform = `translateX(${offset}px)`;
+            });
+        }
+
+        // ========================
+        // CONTACT FORM
+        // ========================
+        function setupContactForm() {
+            DOM.contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(DOM.contactForm);
+                const data = Object.fromEntries(formData);
+
+                // Show success message (in real app, send to backend)
+                showSuccessMessage();
+
+                // Reset form
+                DOM.contactForm.reset();
+            });
+        }
+
+        function showSuccessMessage() {
+            const successMessage = document.createElement('div');
+            successMessage.className = 'glass-card';
+            successMessage.style.cssText = `
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 3rem;
+        text-align: center;
+        z-index: 10000;
+        max-width: 500px;
+        animation: modalSlideUp 0.4s ease;
+    `;
+
+            successMessage.innerHTML = `
+        <i class="fas fa-check-circle" style="font-size: 4rem; color: #04a328; margin-bottom: 1rem;"></i>
+        <h3 style="font-size: 2rem; color: #024f16; margin-bottom: 1rem;">Message Sent!</h3>
+        <p style="font-size: 1.1rem; color: #6c757d;">Thank you for reaching out. Our team will contact you within 24 hours.</p>
+    `;
+
+            document.body.appendChild(successMessage);
+
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 9999;
+    `;
+            document.body.appendChild(overlay);
+
+            // Remove after 3 seconds
+            setTimeout(() => {
+                successMessage.remove();
+                overlay.remove();
+            }, 3000);
+        }
+
+        // ========================
+        // SCROLL TO TOP
+        // ========================
+        function setupScrollToTop() {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    DOM.scrollTop.classList.add('visible');
+                } else {
+                    DOM.scrollTop.classList.remove('visible');
+                }
+            });
+
+            DOM.scrollTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // ========================
+        // AOS (ANIMATE ON SCROLL)
+        // ========================
+        function setupAOSAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('aos-animate');
+
+                        // Apply delay if specified
+                        const delay = entry.target.getAttribute('data-aos-delay');
+                        if (delay) {
+                            entry.target.style.transitionDelay = `${delay}ms`;
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            const animatedElements = document.querySelectorAll('[data-aos]');
+            animatedElements.forEach(element => observer.observe(element));
+        }
+
+        // ========================
+        // BRANDS MARQUEE SETUP
+        // ========================
+        function setupMarquee() {
+            const marqueeTrack = document.querySelector('.marquee-track');
+
+            // Pause on hover
+            marqueeTrack.addEventListener('mouseenter', () => {
+                marqueeTrack.style.animationPlayState = 'paused';
+            });
+
+            marqueeTrack.addEventListener('mouseleave', () => {
+                marqueeTrack.style.animationPlayState = 'running';
+            });
+        }
+
+        // ========================
+        // UTILITY FUNCTIONS
+        // ========================
+
+        // Debounce function for performance optimization
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // Throttle function for scroll events
+        function throttle(func, limit) {
+            let inThrottle;
+            return function (...args) {
+                if (!inThrottle) {
+                    func.apply(this, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
+
+        // ========================
+        // PERFORMANCE MONITORING
+        // ========================
+        window.addEventListener('load', () => {
+            // Log page load time
+            const loadTime = performance.now();
+            console.log(`Page loaded in ${loadTime.toFixed(2)}ms`);
+
+            // Add smooth reveal to page
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                document.body.style.transition = 'opacity 0.5s ease';
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // ========================
+        // ERROR HANDLING
+        // ========================
+        window.addEventListener('error', (e) => {
+            console.error('JavaScript Error:', e.message);
+        });
+
+        // ========================
+        // CONSOLE BRANDING
+        // ========================
+        console.log('%cVoltEdge Solutions', 'font-size: 24px; font-weight: bold; color: #024f16;');
+        console.log('%cPowering Your Future with Innovation', 'font-size: 14px; color: #6c757d;');
+        console.log('%c━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━', 'color: #024f16;');
+        console.log('%cWebsite Design & Development', 'font-weight: bold;');
+        console.log('%cBuilt with HTML5, CSS3, Vanilla JavaScript', 'color: #6c757d;');
+        console.log('%c© 2024 VoltEdge Solutions. All rights reserved.', 'font-style: italic; color: #adb5bd;');
+
+        // ========================
+        // EXPORT FOR DEBUGGING
+        // ========================
+        if (typeof window !== 'undefined') {
+            window.VoltEdge = {
+                state: AppState,
+                dom: DOM,
+                serviceData: serviceData,
+                version: '1.0.0'
+            };
+        }
+    </script>
+</body>
+
+</html>
