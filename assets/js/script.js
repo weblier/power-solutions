@@ -59,20 +59,6 @@ const servicesData = [
         ]
     },
     {
-        id: 5,
-        icon: 'fa-circle-nodes',
-        title: 'Transformer Service & Repair',
-        description: 'Comprehensive transformer maintenance, repair, and oil dehydration services.',
-        features: [
-            'Transformer oil testing and analysis',
-            'Oil filtration and dehydration',
-            'Preventive maintenance services',
-            'Breakdown repair and troubleshooting',
-            'Winding repair and replacement',
-            'Performance testing and certification'
-        ]
-    },
-    {
         id: 6,
         icon: 'fa-microchip',
         title: 'Automation Works',
@@ -84,20 +70,6 @@ const servicesData = [
             'Sensor and actuator integration',
             'Process automation consulting',
             'System upgrades and retrofitting'
-        ]
-    },
-    {
-        id: 7,
-        icon: 'fa-gears',
-        title: 'ACB & VCB Service',
-        description: 'Specialized service and repair for Air Circuit Breakers and Vacuum Circuit Breakers.',
-        features: [
-            'ACB servicing and repair',
-            'VCB maintenance and testing',
-            'Contact replacement and refurbishment',
-            'Trip testing and calibration',
-            'Preventive maintenance contracts',
-            'Emergency breakdown support'
         ]
     },
     {
