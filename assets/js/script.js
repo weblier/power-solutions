@@ -73,20 +73,6 @@ const servicesData = [
         ]
     },
     {
-        id: 8,
-        icon: 'fa-plug',
-        title: 'Earthing Materials',
-        description: 'Supply and installation of complete earthing systems and lightning protection.',
-        features: [
-            'Earthing electrode supply and installation',
-            'Lightning arrester systems',
-            'Earth pit construction',
-            'Soil resistivity testing',
-            'Earth resistance measurement',
-            'Compliance with IS standards'
-        ]
-    },
-    {
         id: 9,
         icon: 'fa-lightbulb',
         title: 'Street Light Poles',
